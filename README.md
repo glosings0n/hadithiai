@@ -1,6 +1,6 @@
 # HadithiAI
 
-I built HadithiAI as my Live Agents challenge submission. It is a real-time storytelling and learning mobile app.
+HadithiAI is a Live Agents challenge submission focused on real-time storytelling and learning.
 
 ## Challenge Submission Checklist
 
@@ -32,21 +32,21 @@ flutter analyze
 ```
 
 Backend target used by this app:
-- I configured the Cloud Run API base URL in [lib/core/constants/api_constants.dart](lib/core/constants/api_constants.dart)
+- Cloud Run API base URL is configured in [lib/core/constants/api_constants.dart](lib/core/constants/api_constants.dart)
 - Current value: https://hadithiai-orchestrator-292237971535.us-central1.run.app
 
 ### 3) Proof of Google Cloud Deployment
 
-For Google Cloud proof, I provide one of the following:
+Google Cloud proof is provided through one of the following:
 
 - Option A: a short recording proving backend is running on Google Cloud (Cloud Run console page or live logs)
 - Option B: a repository code link proving usage of Google Cloud services/APIs
 
 Code evidence links:
-- My Cloud Run backend URL config: [lib/core/constants/api_constants.dart](lib/core/constants/api_constants.dart)
-- My live API docs on deployed backend: [https://hadithiai-orchestrator-292237971535.us-central1.run.app/docs](https://hadithiai-orchestrator-292237971535.us-central1.run.app/docs)
-- My frontend API contract consumed from orchestrator: [API_DOCUMENTATION.md](API_DOCUMENTATION.md)
-- My story generation API calls from app:
+- Cloud Run backend URL config: [lib/core/constants/api_constants.dart](lib/core/constants/api_constants.dart)
+- Live API docs on deployed backend: [https://hadithiai-orchestrator-292237971535.us-central1.run.app/docs](https://hadithiai-orchestrator-292237971535.us-central1.run.app/docs)
+- Frontend API contract consumed from orchestrator: [https://github.com/AbraImani/hadithiAI_orchestrator/blob/master/docs/API_DOCUMENTATION.md](https://github.com/AbraImani/hadithiAI_orchestrator/blob/master/docs/API_DOCUMENTATION.md)
+- Story generation API calls from app:
 	- [lib/core/services/api_service.dart](lib/core/services/api_service.dart)
 	- [lib/core/providers/story_provider.dart](lib/core/providers/story_provider.dart)
 
@@ -93,16 +93,16 @@ flowchart LR
 ```
 
 Judge visibility tip:
-- I also export this diagram as PNG and include it in the file upload/image carousel so it is easy to find.
+- Export this diagram as PNG and include it in the file upload/image carousel so it is easy to find.
 
 ## What HadithiAI Does
 
-- I generate a Story of the Day using cultural metadata (id, title, summary, language, region)
-- I generate story illustrations via a dedicated image endpoint
-- I provide a read-aloud narration mode
-- I support real-time voice interaction with interruption handling
-- I include riddle gameplay with scoring and hints
-- I provide a library of daily story seeds
+- It generates a Story of the Day using cultural metadata (id, title, summary, language, region)
+- It generates story illustrations via a dedicated image endpoint
+- It provides a read-aloud narration mode
+- It supports real-time voice interaction with interruption handling
+- It includes riddle gameplay with scoring and hints
+- It provides a library of daily story seeds
 
 ## API Flow Used by the App
 
@@ -112,7 +112,7 @@ Judge visibility tip:
 - Realtime audio: WebSocket /ws
 
 Reference docs:
-- [API_DOCUMENTATION.md](API_DOCUMENTATION.md)
+- [https://github.com/AbraImani/hadithiAI_orchestrator/blob/master/docs/API_DOCUMENTATION.md](https://github.com/AbraImani/hadithiAI_orchestrator/blob/master/docs/API_DOCUMENTATION.md)
 
 ## Tech Stack
 
@@ -158,4 +158,4 @@ lib/
 - Session service: [lib/core/services/app_session_service.dart](lib/core/services/app_session_service.dart)
 - Story provider: [lib/core/providers/story_provider.dart](lib/core/providers/story_provider.dart)
 - API service: [lib/core/services/api_service.dart](lib/core/services/api_service.dart)
-- API contract: [API_DOCUMENTATION.md](API_DOCUMENTATION.md)
+- API contract: [https://github.com/AbraImani/hadithiAI_orchestrator/blob/master/docs/API_DOCUMENTATION.md](https://github.com/AbraImani/hadithiAI_orchestrator/blob/master/docs/API_DOCUMENTATION.md)
