@@ -92,8 +92,8 @@ flowchart LR
     ORCH --> GCP["Google Cloud Run"]
 ```
 
-Judge visibility tip:
-- Export this diagram as PNG and include it in the file upload/image carousel so it is easy to find.
+Judge visibility:
+- You can find the PNG version of this diagram in [upload/images/architecture-diagram.png](upload/images/architecture-diagram.png).
 
 ## What HadithiAI Does
 
