@@ -62,34 +62,34 @@ Other proof:
 
 ```mermaid
 flowchart LR
-		U[Mobile User] --> A[Flutter App]
+    U["Mobile User"] --> A["Flutter App"]
 
-		subgraph App Layer
-			A --> P1[AppSessionProvider]
-			A --> P2[StoryProvider]
-			A --> P3[StoryNarrationProvider]
-			A --> P4[LiveAudioProvider]
-			A --> P5[RiddleProvider]
-		end
+    subgraph APP["App Layer"]
+        A --> P1["AppSessionProvider"]
+        A --> P2["StoryProvider"]
+        A --> P3["StoryNarrationProvider"]
+        A --> P4["LiveAudioProvider"]
+        A --> P5["RiddleProvider"]
+    end
 
-		P1 --> SVC1[AppSessionService]
-		P2 --> SVC1
-		P3 --> SVC1
-		P4 --> SVC1
+    P1 --> SVC1["AppSessionService"]
+    P2 --> SVC1
+    P3 --> SVC1
+    P4 --> SVC1
 
-		SVC1 --> REST[/REST API]
-		P2 --> REST
-		P2 --> IMG[/POST /api/v1/stories/daystory/image]
-		P4 --> WS[(WebSocket /ws)]
-		P3 --> WS
+    SVC1 --> REST["REST API"]
+    P2 --> REST
+    P2 --> IMG["POST /api/v1/stories/daystory/image"]
+    P3 --> WS["WebSocket /ws"]
+    P4 --> WS
 
-		REST --> ORCH[HadithiAI Orchestrator]
-		IMG --> ORCH
-		WS --> ORCH
+    REST --> ORCH["HadithiAI Orchestrator"]
+    IMG --> ORCH
+    WS --> ORCH
 
-		ORCH --> GLIVE[Gemini Live API]
-		ORCH --> AGENTS[Story, Narration, Riddle, Visual Agents]
-		ORCH --> GCP[(Google Cloud Run)]
+    ORCH --> GLIVE["Gemini Live API"]
+    ORCH --> AGENTS["Story, Narration, Riddle, Visual Agents"]
+    ORCH --> GCP["Google Cloud Run"]
 ```
 
 Judge visibility tip:
